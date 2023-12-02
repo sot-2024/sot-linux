@@ -17,8 +17,8 @@ if [ -z "$first_name" ] || [ -z "$last_name" ]; then
 fi
 
 # Generate username and password
-username="${first_name,,}${last_name,,}"  # Concatenate lowercased first name and last name
-password="${first_name:0:1}${last_name}"  # Use the first name initial plus last name as the password
+password="${first_name,,}${last_name,,}"  # Concatenate lowercased first name and last name
+username="${first_name:0:1}${last_name}"  # Use the first name initial plus last name as the password
 
 # Check if the username is already taken
 if id "$username" &>/dev/null; then
